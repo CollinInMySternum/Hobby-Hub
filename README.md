@@ -1,9 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
-For a new developer, you must run ```npm start``` in the repository root to install any dependencies.
 
-First, run the development server:
+You must run ```npm start``` in the repository root to install any dependencies.
+
+Then, run the development server:
 
 ```bash
 npm run dev
