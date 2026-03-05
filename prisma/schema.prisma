@@ -20,6 +20,8 @@ model Post {
 
   title   String
   content String
+  user    User?   @relation(fields: [userId], references: [id])
+  userId  String?
 
   @@map("posts")
 }
@@ -34,6 +36,7 @@ model User {
   updatedAt     DateTime  @updatedAt
   sessions      Session[]
   accounts      Account[]
+  posts         Post[]
 
   @@unique([email])
   @@map("user")
