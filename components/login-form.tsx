@@ -1,19 +1,22 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button"
 
 import { toast } from "sonner"
-
 import { signIn } from "@/lib/auth-client"
+import { useRouter } from "next/navigation"
 
 export const LoginForm = () => {
 
+    const [isPending, setIsPending] = useState(false);
+    const router = useRouter();
+
     async function handleSubmit(evt: React.SubmitEvent<HTMLFormElement>) {
-        evt.preventDefault()
+        evt.preventDefault();
         const formData = new FormData(evt.target as HTMLFormElement);
 
         const email = String(formData.get("email"));
@@ -28,10 +31,10 @@ export const LoginForm = () => {
                 password
             },
             {
-                onRequest: () => { },
-                onResponse: () => { },
+                onRequest: () => { setIsPending(true) },
+                onResponse: () => { setIsPending(false) },
                 onError: (ctx) => { toast.error(ctx.error.message); },
-                onSuccess: () => { },
+                onSuccess: () => { router.push("/auth/profile") },
             }
         );
     }
