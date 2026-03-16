@@ -2,10 +2,10 @@
 
 Hobby Hub is a welcoming online space for hobbyists. Content is promoted on popularity and user interests, driven via tags.
 
-Contributors:
+# Contributors:
 
-Collin Blumenauer
-James Sparks
+- Collin Blumenauer
+- James Sparks
 
 ## Getting Started
 
