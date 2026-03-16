@@ -1,6 +1,11 @@
-## This is the Hobby Hub Development Repository.
+## This is the Hobby Hub Development Repository for CS 3560 at Ohio University
 
 Hobby Hub is a welcoming online space for hobbyists. Content is promoted on popularity and user interests, driven via tags.
+
+Contributors:
+
+Collin Blumenauer
+James Sparks
 
 ## Getting Started
 
